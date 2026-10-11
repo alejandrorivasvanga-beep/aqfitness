@@ -1,22 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import Placeholder from '../components/Placeholder.astro';
 import HubSpotForm from '../components/HubSpotForm.astro';
 ---
 <BaseLayout
   title="Ultimate Blueprint for Fat Loss"
-  description="Get Aquam Fitness's Ultimate Blueprint for Fat Loss: practical strategies to lose fat, build better habits and make progress without restrictive diets."
+  description="Get Aquam Fitness's free Ultimate Blueprint for Fat Loss: practical guidance on calorie balance, protein, daily movement, recovery and sustainable habits."
   mood="coaching"
   breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Ultimate Blueprint for Fat Loss', path: '/free-guide/' }]}
 >
   <PageHero
     mood="coaching"
     title="Get the Ultimate Blueprint for Fat Loss"
-    lead="Practical strategies to help you lose fat, build better habits and get results without restrictive diets or spending your life in the gym."
+    lead="A straightforward guide to the foundations of sustainable fat loss—without crash diets, complicated rules, or trying to spend your life in the gym."
   >
     <div slot="aside" class="guide-form">
-      <h2>Send me the free blueprint</h2>
+      <h2>Get the free blueprint</h2>
       <HubSpotForm id="free-guide-signup" />
       <p class="small muted">You'll also get occasional training and nutrition tips. Unsubscribe any time.</p>
     </div>
@@ -24,14 +23,21 @@ import HubSpotForm from '../components/HubSpotForm.astro';
 
   <section class="section">
     <div class="wrap inside">
-      <h2>What's inside</h2>
-      <p><Placeholder label="guide contents, to be written by Alejandro" /></p>
+      <h2>What you'll learn</h2>
+      <p>This guide breaks down the core habits that can help you make fat-loss progress while balancing work, family and the rest of your life.</p>
       <ul>
-        <li>Practical fat-loss strategies you can use right away</li>
-        <li>How to build sustainable nutrition habits</li>
-        <li>Ways to stay consistent without restrictive diets</li>
-        <li>How to make progress while living your real life</li>
+        <li><strong>Calorie balance without extreme dieting:</strong> why a moderate, sustainable calorie deficit matters.</li>
+        <li><strong>Protein and balanced nutrition:</strong> how to prioritize protein while still making room for carbohydrates and fats.</li>
+        <li><strong>Daily movement and strength training:</strong> how everyday activity complements your workouts.</li>
+        <li><strong>Recovery and stress management:</strong> why sleep, recovery and consistency belong in the plan, too.</li>
+        <li><strong>Practical habits for the long game:</strong> using filling, nutrient-dense foods and focusing on the choices you can control.</li>
       </ul>
+      <p class="small muted">This is an educational guide to the fundamentals—not a personalized meal plan, calorie prescription, or substitute for one-on-one coaching.</p>
+      <div class="next-step">
+        <h2>Want help putting it into practice?</h2>
+        <p>The guide explains the foundations. Our one-on-one coaching helps you apply them to your goals, preferences and schedule, with ongoing support and adjustments.</p>
+        <a class="btn btn-primary" href="/coaching/">Explore 1:1 coaching</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -42,6 +48,7 @@ import HubSpotForm from '../components/HubSpotForm.astro';
   .guide-form p { margin: 0; }
   .inside { max-width: 760px; }
   .inside ul { color: var(--text); }
-  .inside li + li { margin-top: 8px; }
+  .inside li + li { margin-top: 12px; }
   .inside li::marker { color: var(--accent-ink); }
+  .next-step { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--border); }
 </style>
